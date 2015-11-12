@@ -1,0 +1,34 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "description": "CSS Ping Pong",
+  "main": "pong.js",
+  "scripts": {
+    "start": "npm run build && http-server",
+    "test": "semistandard",
+    "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
+    "clean": "rm -rf dist",
+    "build-html": "cp src/index.html dist/index.html",
+    "build-css": "cp src/ping.css dist/ping.css",
+    "build-js": "browserify src/pong.js --outfile dist/pong.js --transform babelify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yongjun21/css-animation-Ping-Pong.git"
+  },
+  "keywords": [
+    "ping",
+    "pong",
+    "game",
+    "animation"
+  ],
+  "author": "@yongjun21",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015": "^6.1.2",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "http-server": "^0.8.5",
+    "semistandard": "^7.0.2"
+  }
+}
