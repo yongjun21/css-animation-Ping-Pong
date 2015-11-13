@@ -46,6 +46,8 @@ h1 {
 }
 
 .bouncing {
+  -webkit-animation: bounce 1500ms infinite ;
+  -moz-animation: bounce 1500ms infinite ;
   animation: bounce 1500ms infinite ;
 }
 
@@ -57,6 +59,28 @@ h1 {
   right: -10px;
 }
 
+@-webkit-keyframes bounce {
+  0%, 100% {
+    bottom: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 360px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+@-moz-keyframes bounce {
+  0%, 100% {
+    bottom: 0;
+    -moz-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 360px;
+    -moz-animation-timing-function: ease-in;
+  }
+}
+
 @keyframes bounce {
   0%, 100% {
     bottom: 0;
@@ -66,4 +90,9 @@ h1 {
     bottom: 360px;
     animation-timing-function: ease-in;
   }
+}
+
+@media (max-width: 1200px) {
+  #table {width: 724px;}
+  #net {left: 356px;}
 }

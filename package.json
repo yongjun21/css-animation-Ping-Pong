@@ -4,13 +4,17 @@
   "description": "CSS Ping Pong",
   "main": "pong.js",
   "scripts": {
-    "start": "npm run build && http-server",
-    "test": "semistandard",
+    "start": "npm run build && npm run start-server",
+    "start-server": "http-server dist",
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "clean": "rm -rf dist",
     "build-html": "cp src/index.html dist/index.html",
     "build-css": "cp src/ping.css dist/ping.css",
-    "build-js": "browserify src/pong.js --outfile dist/pong.js --transform babelify"
+    "build-js": "browserify src/pong.js --outfile dist/pong.js --transform babelify",
+    "watch": "npm run build && npm run watch-html & npm run watch-css & npm run watch-js & npm run start-server",
+    "watch-html": "watch-spawn -p 'src/index.html' npm run build-html",
+    "watch-css": "watch-spawn -p 'src/ping.css' npm run build-css",
+    "watch-js": "watchify src/pong.js --outfile dist/pong.js --transform babelify --verbose"
   },
   "repository": {
     "type": "git",
@@ -30,5 +34,9 @@
     "browserify": "^12.0.1",
     "http-server": "^0.8.5",
     "semistandard": "^7.0.2"
+  },
+  "devDependencies": {
+    "watch-spawn": "^1.0.6",
+    "watchify": "^3.6.0"
   }
 }
