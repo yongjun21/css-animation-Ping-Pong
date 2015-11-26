@@ -1,4 +1,5 @@
-## CSS Ping Pong
+## CSS Ping Pong [![Build Status](https://travis-ci.org/yongjun21/css-animation-Ping-Pong.svg?branch=master)](https://travis-ci.org/yongjun21/css-animation-Ping-Pong)
+
 This toy application was made to simulate to the old school [Pong](https://en.wikipedia.org/wiki/Pong) game. It was created using simple **CSS transition/animation** supplemented by a few lines of JavaScript code. No complicated math was involved in recreating the seemingly random bouncing effect.
 
 The trick here is to separate out motion in the x-direction from motion in the y-direction. Recalling high school physics, assuming motion through air is frictionless, translation in x can be taken to be linear. The parabolic path we observe is to due to deceleration and acceleration on the y-axis. Assuming again frictionless motion, this can be replicated by a simple up/down animation loop. Instead of manually working out the deceleration and acceleration, we take advantage of the ease in/ease out **timing function** in CSS animation.
