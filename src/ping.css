@@ -12,7 +12,7 @@ h1 {
 }
 
 #table {
-  width: 1224px;
+  width: 1212px;
   height: 400px;
   margin: 0 auto;
   border-bottom: 40px solid white;
@@ -24,9 +24,13 @@ h1 {
   border-radius: 12px;
   position: absolute;
   left: 0;
-  bottom: 200px;
+  bottom: 0;
   transition: left 1200ms linear;
   visibility: hidden;
+}
+
+#ball.playerSide {
+  left: 1200px;
 }
 
 #net {
@@ -47,7 +51,6 @@ h1 {
 
 .bouncing {
   -webkit-animation: bounce 1500ms infinite ;
-  -moz-animation: bounce 1500ms infinite ;
   animation: bounce 1500ms infinite ;
 }
 
@@ -70,17 +73,6 @@ h1 {
   }
 }
 
-@-moz-keyframes bounce {
-  0%, 100% {
-    bottom: 0;
-    -moz-animation-timing-function: ease-out;
-  }
-  50% {
-    bottom: 360px;
-    -moz-animation-timing-function: ease-in;
-  }
-}
-
 @keyframes bounce {
   0%, 100% {
     bottom: 0;
@@ -95,4 +87,5 @@ h1 {
 @media (max-width: 1200px) {
   #table {width: 724px;}
   #net {left: 356px;}
+  #ball.playerSide {left: 700px;}
 }
