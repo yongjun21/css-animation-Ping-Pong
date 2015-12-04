@@ -1,4 +1,4 @@
-## CSS Ping Pong [![Build Status](https://travis-ci.org/yongjun21/css-animation-Ping-Pong.svg?branch=master)](https://travis-ci.org/yongjun21/css-animation-Ping-Pong)
+## CSS Ping Pong [![Build Status](https://travis-ci.org/yongjun21/css-animation-Ping-Pong.svg?branch=master)](https://travis-ci.org/yongjun21/css-animation-Ping-Pong) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
 This [toy application](http://css-ping-pong.surge.sh) was made to simulate to the old school [Pong](https://en.wikipedia.org/wiki/Pong) game. It was created using simple **CSS transition/animation** supplemented by a few lines of JavaScript code. No complicated math was involved in recreating the seemingly random bouncing effect.
 
