@@ -33,7 +33,8 @@ h1 {
   left: 0;
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  transition: transform,-webkit-transform 1200ms linear;
+  transition: -webkit-transform 1200ms linear;
+  transition: transform 1200ms linear;
   visibility: hidden;
 }
 
