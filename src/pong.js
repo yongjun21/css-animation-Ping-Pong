@@ -1,4 +1,4 @@
-var ball = document.querySelector('#ball');
+var ball = document.getElementById('ballX');
 
 var listener = function (event) {
   var randomSpeed = Math.round(1000 + 300 * Math.random());
